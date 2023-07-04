@@ -2,6 +2,7 @@ import argparse
 import os
 import glob
 import random
+import shutil
 import tqdm
 from multiprocessing import Process, cpu_count
 
@@ -55,6 +56,8 @@ def main(input_dir_path, input_classes_path, output_dir_path, records_prefix_ind
         p.start()
     for p in processes:
         p.join()
+
+    shutil.copy2(input_classes_path, os.path.join(output_dir_path, os.path.basename(input_classes_path)))
 
 
 if __name__ == '__main__':
