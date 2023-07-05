@@ -64,7 +64,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='main')
     parser.add_argument('--input_dir_path', type=str, default='~/.vaik-utc101-video-classification-dataset/train')
     parser.add_argument('--input_classes_path', type=str,
-                        default='~/.vaik-utc101-video-classification-dataset/ucf101_labels.txt')
+                        default='~/.vaik-utc101-video-classification-dataset/sub_ucf101_labels.txt')
     parser.add_argument('--output_dir_path', type=str,
                         default='~/.vaik-utc101-video-classification-dataset_tfrecords/train')
     parser.add_argument('--records_prefix_index', type=str, default='00')
