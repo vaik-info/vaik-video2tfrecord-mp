@@ -40,7 +40,7 @@ def main(input_dir_path, input_classes_path, output_dir_path, records_prefix_ind
 
     video_path_list = []
     for class_label in classes:
-        for video_path in glob.glob(os.path.join(input_dir_path, class_label, '*.mp4')):
+        for video_path in glob.glob(os.path.join(input_dir_path, class_label, '*.avi')):
             video_path_list.append((video_path, class_label))
     random.shuffle(video_path_list)
 
